@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Portfolio Blue Color Palette */
+    --background: 224 71% 94%; /* E0E1DD - Light gray background */
+    --foreground: 210 44% 8%; /* 0D1B2A - Dark navy text */
+
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 210 44% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 44% 8%;
+
+    --primary: 210 44% 8%; /* 0D1B2A - Dark navy primary */
+    --primary-foreground: 224 71% 94%;
+
+    --secondary: 214 32% 48%; /* 778DA9 - Medium blue */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 33% 17%; /* 1B263B - Dark blue muted */
+    --muted-foreground: 214 32% 48%;
+
+    --accent: 215 50% 39%; /* 415A77 - Blue accent */
+    --accent-foreground: 224 71% 94%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 224 71% 94%;
+
+    --border: 214 32% 48%; /* 778DA9 with transparency */
+    --input: 224 71% 94%;
+    --ring: 215 50% 39%;
+
+    --radius: 0.75rem;
+
+    /* Portfolio specific colors */
+    --navy-dark: 210 44% 8%; /* #0D1B2A */
+    --navy-medium: 217 33% 17%; /* #1B263B */
+    --blue-accent: 215 50% 39%; /* #415A77 */
+    --blue-light: 214 32% 48%; /* #778DA9 */
+    --gray-light: 224 71% 94%; /* #E0E1DD */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--navy-dark)), hsl(var(--navy-medium)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--blue-accent)), hsl(var(--blue-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--navy-dark)) 0%, hsl(var(--navy-medium)) 50%, hsl(var(--blue-accent)) 100%);
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--blue-accent) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(var(--navy-dark) / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--blue-light) / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  /* Custom button variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-[hsl(var(--navy-dark))] to-[hsl(var(--navy-medium))] text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:shadow-[var(--shadow-elegant)] hover:scale-105;
+  }
+  
+  .btn-outline-hero {
+    @apply border-2 border-[hsl(var(--blue-accent))] text-[hsl(var(--blue-accent))] px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:bg-[hsl(var(--blue-accent))] hover:text-white hover:shadow-[var(--shadow-elegant)];
+  }
+
+  /* Card styles */
+  .card-portfolio {
+    @apply bg-card rounded-xl shadow-[var(--shadow-card)] transition-all duration-300 hover:shadow-[var(--shadow-elegant)] hover:-translate-y-2;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Gradient backgrounds */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Typing animation */
+  .typing-animation {
+    overflow: hidden;
+    border-right: 0.15em solid hsl(var(--blue-accent));
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.1em;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: hsl(var(--blue-accent));
+    }
+  }
+}
