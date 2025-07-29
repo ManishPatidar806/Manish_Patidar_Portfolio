@@ -1,27 +1,46 @@
-import React from 'react';
+import React from "react";
 import {
-  ReactIcon, ReduxIcon, Html5Icon, Css3Icon, TailwindCssIcon, JavascriptIcon,
-  NodeJsIcon, ExpressJsIcon, RestApiIcon, GraphQlIcon, JwtAuthIcon, SocketIoIcon,
-  MongoDbIcon,  PostgresqlIcon, RedisIcon,
-  GitGithubIcon, VsCodeIcon, PostmanIcon, DockerIcon, AwsIcon, VercelIcon,
-  TypescriptIcon, NextJsIcon, MicroservicesIcon,
+  ReactIcon,
+  ReduxIcon,
+  Html5Icon,
+  Css3Icon,
+  TailwindCssIcon,
+  JavascriptIcon,
+  NodeJsIcon,
+  ExpressJsIcon,
+  RestApiIcon,
+  GraphQlIcon,
+  JwtAuthIcon,
+  SocketIoIcon,
+  MongoDbIcon,
+  PostgresqlIcon,
+  RedisIcon,
+  GitGithubIcon,
+  VsCodeIcon,
+  PostmanIcon,
+  DockerIcon,
+  AwsIcon,
+  VercelIcon,
+  TypescriptIcon,
+  NextJsIcon,
+  MicroservicesIcon,
   JavaIcon,
   SpringBootIcon,
-  MySqlIcon
-} from '../assets/icons'; // Adjust path as necessary
+  MySqlIcon,
+} from "../assets/icons"; // Adjust path as necessary
 
 const SkillsSection = () => {
   const skillCategories = [
     {
       title: "Frontend",
       skills: [
-        { name: "React.js", level: 95, icon: <ReactIcon /> },
-        { name: "Redux", level: 90, icon: <ReduxIcon /> },
+        // { name: "Redux", level: 90, icon: <ReduxIcon /> },
         { name: "HTML5", level: 98, icon: <Html5Icon /> },
         { name: "CSS3", level: 95, icon: <Css3Icon /> },
+        { name: "JavaScript (ES6+)", level: 95, icon: <JavascriptIcon /> },
+        { name: "React.js", level: 95, icon: <ReactIcon /> },
         { name: "Tailwind CSS", level: 92, icon: <TailwindCssIcon /> },
-        { name: "JavaScript (ES6+)", level: 95, icon: <JavascriptIcon /> }
-      ]
+      ],
     },
     {
       title: "Backend",
@@ -34,16 +53,16 @@ const SkillsSection = () => {
         // { name: "GraphQL", level: 80, icon: <GraphQlIcon /> },
         { name: "JWT Auth", level: 88, icon: <JwtAuthIcon /> },
         // { name: "Socket.io", level: 85, icon: <SocketIoIcon /> }
-      ]
+      ],
     },
     {
       title: "Database",
       skills: [
         { name: "MongoDB", level: 90, icon: <MongoDbIcon /> },
-         { name: "MySql", level: 88, icon: <MySqlIcon /> },
+        { name: "MySql", level: 88, icon: <MySqlIcon /> },
         { name: "PostgreSQL", level: 75, icon: <PostgresqlIcon /> },
-        { name: "Redis", level: 70, icon: <RedisIcon /> }
-      ]
+        // { name: "Redis", level: 70, icon: <RedisIcon /> }
+      ],
     },
     {
       title: "Tools & DevOps",
@@ -51,11 +70,11 @@ const SkillsSection = () => {
         { name: "Git & GitHub", level: 95, icon: <GitGithubIcon /> },
         { name: "VS Code", level: 98, icon: <VsCodeIcon /> },
         { name: "Postman", level: 92, icon: <PostmanIcon /> },
-       { name: "Microservices", icon: <MicroservicesIcon /> },
+        { name: "Microservices", icon: <MicroservicesIcon /> },
         { name: "AWS", level: 70, icon: <AwsIcon /> },
-        { name: "Vercel", level: 90, icon: <VercelIcon /> }
-      ]
-    }
+        { name: "Vercel", level: 90, icon: <VercelIcon /> },
+      ],
+    },
   ];
 
   return (
@@ -91,7 +110,9 @@ const SkillsSection = () => {
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center space-x-2">
                         <span className="text-lg">{skill.icon}</span>
-                        <span className="font-medium text-sm">{skill.name}</span>
+                        <span className="font-medium text-sm">
+                          {skill.name}
+                        </span>
                       </div>
                       {/* <span className="text-blue-light text-sm font-semibold">
                         {skill.level}%
@@ -104,7 +125,9 @@ const SkillsSection = () => {
                         className="h-full bg-gradient-accent rounded-full transition-all duration-1000 ease-out"
                         style={{
                           width: `${skill.level}%`,
-                          animationDelay: `${(categoryIndex * 0.1) + (skillIndex * 0.05)}s`
+                          animationDelay: `${
+                            categoryIndex * 0.1 + skillIndex * 0.05
+                          }s`,
                         }}
                       ></div>
                     </div>
@@ -124,9 +147,7 @@ const SkillsSection = () => {
             {[
               { name: "TypeScript", icon: <TypescriptIcon /> },
               { name: "Next.js", icon: <NextJsIcon /> },
-                { name: "Docker", level: 75, icon: <DockerIcon /> },
-             
-            
+              { name: "Docker", level: 75, icon: <DockerIcon /> },
             ].map((tech) => (
               <div
                 key={tech.name}
