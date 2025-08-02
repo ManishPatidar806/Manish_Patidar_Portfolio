@@ -80,7 +80,7 @@ const ContactSection = () => {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/manishpatidar806/",
       color: "hover:text-blue-400",
-    },S
+    }
   ];
 
   return (
