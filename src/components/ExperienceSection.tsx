@@ -1,72 +1,72 @@
 import { Calendar, Link, MapPin } from "lucide-react";
 
 const ExperienceSection = () => {
-  const experiences = [
-    {
-      id: 1,
-      company: "TechStart Solutions",
-      role: "Senior Full Stack Developer",
-      duration: "January 2023 - Present",
-      location: "San Francisco, CA",
-      type: "Full-time",
-      description: [
-        "Led development of a microservices-based e-commerce platform serving 100K+ users",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Mentored 3 junior developers and conducted code reviews",
-        "Architected RESTful APIs using Node.js and Express.js with 99.9% uptime",
-      ],
-      technologies: ["React", "Node.js", "MongoDB", "AWS", "Docker", "Redis"],
-      current: true,
-    },
-    {
-      id: 2,
-      company: "Digital Innovations Inc.",
-      role: "Full Stack Developer",
-      duration: "June 2021 - December 2022",
-      location: "Remote",
-      type: "Full-time",
-      description: [
-        "Developed and maintained 5+ client web applications using MERN stack",
-        "Optimized database queries resulting in 40% performance improvement",
-        "Collaborated with UX/UI team to implement responsive designs",
-        "Integrated third-party APIs including payment gateways and social media platforms",
-      ],
-      technologies: ["React", "Express.js", "MongoDB", "Stripe", "Socket.io"],
-      current: false,
-    },
-    {
-      id: 3,
-      company: "StartupXYZ",
-      role: "Frontend Developer",
-      duration: "August 2020 - May 2021",
-      location: "Austin, TX",
-      type: "Full-time",
-      description: [
-        "Built responsive web applications using React and modern JavaScript",
-        "Implemented state management solutions with Redux and Context API",
-        "Collaborated with backend team to design and consume RESTful APIs",
-        "Participated in daily standups and sprint planning in Agile environment",
-      ],
-      technologies: ["React", "Redux", "JavaScript", "CSS3", "Git"],
-      current: false,
-    },
-    {
-      id: 4,
-      company: "Freelance",
-      role: "Web Developer",
-      duration: "January 2020 - July 2020",
-      location: "Remote",
-      type: "Contract",
-      description: [
-        "Delivered 8+ custom websites for small businesses and startups",
-        "Provided end-to-end development from design to deployment",
-        "Implemented SEO best practices resulting in improved search rankings",
-        "Maintained client relationships and provided ongoing technical support",
-      ],
-      technologies: ["React", "Node.js", "WordPress", "PHP", "MySQL"],
-      current: false,
-    },
-  ];
+  // const experiences = [
+  //   {
+  //     id: 1,
+  //     company: "TechStart Solutions",
+  //     role: "Senior Full Stack Developer",
+  //     duration: "January 2023 - Present",
+  //     location: "San Francisco, CA",
+  //     type: "Full-time",
+  //     description: [
+  //       "Led development of a microservices-based e-commerce platform serving 100K+ users",
+  //       "Implemented CI/CD pipelines reducing deployment time by 60%",
+  //       "Mentored 3 junior developers and conducted code reviews",
+  //       "Architected RESTful APIs using Node.js and Express.js with 99.9% uptime",
+  //     ],
+  //     technologies: ["React", "Node.js", "MongoDB", "AWS", "Docker", "Redis"],
+  //     current: true,
+  //   },
+  //   {
+  //     id: 2,
+  //     company: "Digital Innovations Inc.",
+  //     role: "Full Stack Developer",
+  //     duration: "June 2021 - December 2022",
+  //     location: "Remote",
+  //     type: "Full-time",
+  //     description: [
+  //       "Developed and maintained 5+ client web applications using MERN stack",
+  //       "Optimized database queries resulting in 40% performance improvement",
+  //       "Collaborated with UX/UI team to implement responsive designs",
+  //       "Integrated third-party APIs including payment gateways and social media platforms",
+  //     ],
+  //     technologies: ["React", "Express.js", "MongoDB", "Stripe", "Socket.io"],
+  //     current: false,
+  //   },
+  //   {
+  //     id: 3,
+  //     company: "StartupXYZ",
+  //     role: "Frontend Developer",
+  //     duration: "August 2020 - May 2021",
+  //     location: "Austin, TX",
+  //     type: "Full-time",
+  //     description: [
+  //       "Built responsive web applications using React and modern JavaScript",
+  //       "Implemented state management solutions with Redux and Context API",
+  //       "Collaborated with backend team to design and consume RESTful APIs",
+  //       "Participated in daily standups and sprint planning in Agile environment",
+  //     ],
+  //     technologies: ["React", "Redux", "JavaScript", "CSS3", "Git"],
+  //     current: false,
+  //   },
+  //   {
+  //     id: 4,
+  //     company: "Freelance",
+  //     role: "Web Developer",
+  //     duration: "January 2020 - July 2020",
+  //     location: "Remote",
+  //     type: "Contract",
+  //     description: [
+  //       "Delivered 8+ custom websites for small businesses and startups",
+  //       "Provided end-to-end development from design to deployment",
+  //       "Implemented SEO best practices resulting in improved search rankings",
+  //       "Maintained client relationships and provided ongoing technical support",
+  //     ],
+  //     technologies: ["React", "Node.js", "WordPress", "PHP", "MySQL"],
+  //     current: false,
+  //   },
+  // ];
 
   return (
     <section className="section-padding bg-navy-dark text-white">
@@ -92,7 +92,7 @@ const ExperienceSection = () => {
                 </p>
               </p>
               <p className="text-gray-light/80 text-sm">
-                2022 - 2026 • GPA: 6.9/10.0
+                2022 - 2026 • GPA: 7.04/10.0
               </p>
             </div>
 
