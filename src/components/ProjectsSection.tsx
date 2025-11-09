@@ -7,6 +7,8 @@ import thinkAndSelect from "@/assets/ThinkAndSelect.png";
 import clothStore from "@/assets/ClothStore.png";
 import sharebox from "@/assets/Share-box.png";
 import visitingPlace from "@/assets/Visiting-place.png";
+import G2store from "@/assets/G2Store.png"
+import Cyntro from "@/assets/Cyntro.png"
 
 const ProjectsSection = () => {
   const projects = [
@@ -23,10 +25,10 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
-      title: "Gameingzone",
+      title: "G2Store",
       description:
-        "Gameingzone is a scalable gaming e-commerce site using microservices, offering all features of e-commerce.",
-      image: gameingZone,
+        "G2Store is a scalable gaming e-commerce site using microservices, offering all features of e-commerce.",
+      image: G2store,
       technologies: [
         "React",
         "Tailwind CSS",
@@ -37,17 +39,17 @@ const ProjectsSection = () => {
         "Flowbite",
         "MicroService-architecture",
       ],
-      liveLink: "https://gameingzone.vercel.app/",
+      liveLink: "https://g2store.vercel.app/",
       githubLink:
-        "https://github.com/ManishPatidar806/GameingZone_MicroService",
+        "https://github.com/ManishPatidar806/G2Store.git",
       featured: true,
     },
     {
       id: 3,
-      title: "ThinkAndSelect",
+      title: "Cyntro",
       description:
-        "ThinkandSelect is a quiz app offering practice and exam modes, certificates, notes, tutorials, and a multi-language online compiler",
-      image: thinkAndSelect,
+        "Cyntro is a learning platform offering practice and exam modes, certificates, notes, tutorials, and a multi-language online compiler",
+      image: Cyntro,
       technologies: [
         "React",
         "Spring Boot",
@@ -56,8 +58,8 @@ const ProjectsSection = () => {
         "Cloudinary",
         "JWT",
       ],
-      liveLink: "https://thinkandselect.vercel.app/",
-      githubLink: "https://github.com/ManishPatidar806/ThinkAndSelect",
+      liveLink: "https://cyntro.vercel.app/",
+      githubLink: "https://github.com/ManishPatidar806/Cyntro.git",
       featured: true,
     },
     {
@@ -100,39 +102,39 @@ const ProjectsSection = () => {
       githubLink: "https://github.com/ManishPatidar806/Visiting-Place",
       featured: true,
     },
-    {
-      id: 7,
-      title: "SmartResponse",
-      description:
-        "Smart Response is a web app using Google’s Gemini AI to craft professional email replies in different tones, built with Spring Boot and React.",
-      // image: projectDashboard,
-      technologies: ["React", "Tailwind CSS", "Spring-boot", "Spring Ai"],
-      // liveLink: "https://weather-demo.com",
-      githubLink: "https://github.com/ManishPatidar806/SmartResponse",
-      featured: false,
-    },
-    {
-      id: 8,
-      title: "PDF2Quiz",
-      description:
-        "PDF2Quiz is an AI-powered platform that generates quizzes from PDFs and includes a chatbot for queries, built with Spring Framework for scalability and performance.",
-      // image: projectSocial,
-      technologies: ["Spring-boot", "Spring-Ai", "MySql", "JWT"],
-      // liveLink: "https://blog-demo.com",
-      githubLink: "https://github.com/ManishPatidar806/PDF2Quiz",
-      featured: false,
-    },
-    {
-      id: 9,
-      title: "BankingApplication",
-      description:
-        "The Banking Portal API offers endpoints for managing accounts, transfers, and transactions, enabling secure and efficient banking operations for users.",
-      // image: projectSocial,
-      technologies: ["Spring-boot", "Spring-Security", "MySql", "JWT"],
-      // liveLink: "https://blog-demo.com",
-      githubLink: "https://github.com/ManishPatidar806/BankingApplication",
-      featured: false,
-    },
+    // {
+    //   id: 7,
+    //   title: "SmartResponse",
+    //   description:
+    //     "Smart Response is a web app using Google’s Gemini AI to craft professional email replies in different tones, built with Spring Boot and React.",
+    //   // image: projectDashboard,
+    //   technologies: ["React", "Tailwind CSS", "Spring-boot", "Spring Ai"],
+    //   // liveLink: "https://weather-demo.com",
+    //   githubLink: "https://github.com/ManishPatidar806/SmartResponse",
+    //   featured: false,
+    // },
+    // {
+    //   id: 8,
+    //   title: "PDF2Quiz",
+    //   description:
+    //     "PDF2Quiz is an AI-powered platform that generates quizzes from PDFs and includes a chatbot for queries, built with Spring Framework for scalability and performance.",
+    //   // image: projectSocial,
+    //   technologies: ["Spring-boot", "Spring-Ai", "MySql", "JWT"],
+    //   // liveLink: "https://blog-demo.com",
+    //   githubLink: "https://github.com/ManishPatidar806/PDF2Quiz",
+    //   featured: false,
+    // },
+    // {
+    //   id: 9,
+    //   title: "BankingApplication",
+    //   description:
+    //     "The Banking Portal API offers endpoints for managing accounts, transfers, and transactions, enabling secure and efficient banking operations for users.",
+    //   // image: projectSocial,
+    //   technologies: ["Spring-boot", "Spring-Security", "MySql", "JWT"],
+    //   // liveLink: "https://blog-demo.com",
+    //   githubLink: "https://github.com/ManishPatidar806/BankingApplication",
+    //   featured: false,
+    // },
   ];
 
   const featuredProjects = projects.filter((project) => project.featured);
@@ -211,7 +213,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* Other Projects Grid */}
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">
             Other Notable Projects
           </h3>
@@ -228,14 +230,14 @@ const ProjectsSection = () => {
                       {project.title}
                     </h4>
                     <div className="flex space-x-2">
-                      {/* <Button
+                      <Button
                         size="sm"
                         variant="ghost"
                         className="p-2 h-auto"
                         onClick={() => window.open(project.liveLink, "_blank")}
                       >
                         <ExternalLink className="w-4 h-4" />
-                      </Button> */}
+                      </Button>
                       <Button
                         size="sm"
                         variant="ghost"
@@ -267,7 +269,7 @@ const ProjectsSection = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* View More Projects CTA */}
         <div className="text-center">
