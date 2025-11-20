@@ -6,7 +6,7 @@ const ExperienceSection = () => {
       id: 1,
       company: "AveryBit Solutions Pvt. Ltd.",
       role: "Software Developer intern",
-      duration: "August 2025 - Present",
+      duration: "August 2025 - November 2025",
       location: "Indore, Madhya Pradesh",
       type: "Internship",
       description: [
@@ -15,7 +15,7 @@ const ExperienceSection = () => {
         "Developed a full-stack web platform connecting families and caregivers with role-based access and secure authentication.",
       ],
       technologies: ["React", "Node.js", "MongoDB", "AWS", "Docker", "Expressjs", "LangChain", "LangGraph"],
-      current: true,
+      current: false,
     },
 
   ];
@@ -146,16 +146,7 @@ const ExperienceSection = () => {
                 Certifications
               </h4>
               <ul className="space-y-1 text-sm text-gray-light/90">
-                <li>
-                  <a
-                    href="https://res.cloudinary.com/dps3eybtx/image/upload/v1735220427/Portfolio/Certificate/cv1k03nsvciu7kxax3dt.png"
-                    className="text-blue-300 group"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    • <span className="hover:underline">Networking Basic</span>
-                  </a>
-                </li>
+
                 <li>
                   <a
                     href="https://res.cloudinary.com/dps3eybtx/image/upload/v1753722034/Portfolio/Certificate/Screenshot_from_2025-07-28_22-30-20_rd7lwz.png"
@@ -164,6 +155,26 @@ const ExperienceSection = () => {
                     rel="noopener noreferrer"
                   >
                     • <span className="hover:underline">AWS Cloud Foundation</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://res.cloudinary.com/dps3eybtx/image/upload/v1763630010/Portfolio/Certificate/DSA_Nptel.png"
+                    className="text-blue-300 group"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    • <span className="hover:underline">DSA Using Java - NPTEL</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://res.cloudinary.com/dps3eybtx/image/upload/v1735220427/Portfolio/Certificate/cv1k03nsvciu7kxax3dt.png"
+                    className="text-blue-300 group"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    • <span className="hover:underline">Networking Basic</span>
                   </a>
                 </li>
                 <li>
@@ -186,16 +197,7 @@ const ExperienceSection = () => {
                     • <span className="hover:underline">Build Fest'25</span>
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="https://res.cloudinary.com/dps3eybtx/image/upload/v1735220442/Portfolio/Certificate/lmdeae3obtzawm0r3cpm.png"
-                    className="text-blue-300 group"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    • <span className="hover:underline">Java Full Stack Development</span>
-                  </a>
-                </li>
+
               </ul>
             </div>
           </div>

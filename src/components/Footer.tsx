@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-blue-light">Manish Patidar</h3>
             <p className="text-gray-light/80 leading-relaxed">
-              Passionate Full Stack Developer creating elegant solutions 
+              Passionate Full Stack Developer creating elegant solutions
               for complex problems. Always learning, always building.
             </p>
           </div>
@@ -31,7 +31,7 @@ const Footer = () => {
                 { name: "Contact", href: "#contact" }
               ].map((link) => (
                 <li key={link.name}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-gray-light/80 hover:text-blue-light transition-colors duration-300 hover:underline"
                   >
@@ -46,7 +46,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-blue-light">Get In Touch</h4>
             <div className="space-y-2">
-              <a 
+              <a
                 href="mailto:alex.johnson@example.com"
                 className="flex items-center text-gray-light/80 hover:text-blue-light transition-colors duration-300"
               >
@@ -55,10 +55,10 @@ const Footer = () => {
               </a>
               <p className="text-gray-light/80">Pithampur, Madhya Pradesh</p>
             </div>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4 pt-2">
-              <a 
+              <a
                 href="https://github.com/ManishPatidar806"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -66,7 +66,7 @@ const Footer = () => {
               >
                 <Github className="w-5 h-5" />
               </a>
-              <a 
+              <a
                 href="www.linkedin.com/in/manishpatidar806"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -74,7 +74,7 @@ const Footer = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a 
+              <a
                 href="mailto:manishpatidar1180@gmail.com"
                 className="p-2 bg-blue-accent/20 rounded-lg hover:bg-blue-accent/30 transition-colors duration-300"
               >
@@ -88,17 +88,10 @@ const Footer = () => {
         <div className="border-t border-blue-accent/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-light/80 text-sm flex items-center">
-              © {currentYear} Manish Patidar. Made with{" "}
-              <Heart className="w-4 h-4 mx-1 text-red-400 fill-current" />
-              and lots of coffee.
+              © {currentYear} Manish Patidar.
             </p>
-            
-            <button
-              onClick={scrollToTop}
-              className="px-4 py-2 bg-blue-accent/20 text-blue-light rounded-lg hover:bg-blue-accent/30 transition-all duration-300 hover:scale-105 text-sm"
-            >
-              Back to Top ↑
-            </button>
+
+
           </div>
         </div>
       </div>

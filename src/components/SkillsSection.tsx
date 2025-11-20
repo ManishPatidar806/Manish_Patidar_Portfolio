@@ -27,6 +27,16 @@ import {
   JavaIcon,
   SpringBootIcon,
   MySqlIcon,
+  Jenkins,
+  Ansible,
+  Sonarqube,
+  Nexus,
+  MavenIcon,
+  Stripe,
+  Swagger,
+  FastApi,
+  Langchain,
+  KubernetesIcon,
 } from "../assets/icons"; // Adjust path as necessary
 
 const SkillsSection = () => {
@@ -50,29 +60,44 @@ const SkillsSection = () => {
         { name: "Node.js", level: 92, icon: <NodeJsIcon /> },
         { name: "Express.js", level: 90, icon: <ExpressJsIcon /> },
         { name: "RESTful APIs", level: 93, icon: <RestApiIcon /> },
+        { name: "MongoDB", level: 90, icon: <MongoDbIcon /> },
+        { name: "MySql", level: 88, icon: <MySqlIcon /> },
         // { name: "GraphQL", level: 80, icon: <GraphQlIcon /> },
         { name: "JWT Auth", level: 88, icon: <JwtAuthIcon /> },
         // { name: "Socket.io", level: 85, icon: <SocketIoIcon /> }
       ],
     },
+    // {
+    //   title: "Database",
+    //   skills: [
+    //     { name: "MongoDB", level: 90, icon: <MongoDbIcon /> },
+    //     { name: "MySql", level: 88, icon: <MySqlIcon /> },
+    //     { name: "PostgreSQL", level: 75, icon: <PostgresqlIcon /> },
+    //     // { name: "Redis", level: 70, icon: <RedisIcon /> }
+    //   ],
+    // },
     {
-      title: "Database",
+      title: "DevOps",
       skills: [
-        { name: "MongoDB", level: 90, icon: <MongoDbIcon /> },
-        { name: "MySql", level: 88, icon: <MySqlIcon /> },
-        { name: "PostgreSQL", level: 75, icon: <PostgresqlIcon /> },
-        // { name: "Redis", level: 70, icon: <RedisIcon /> }
+        { name: "Git & GitHub", level: 95, icon: <GitGithubIcon /> },
+        { name: "AWS", level: 70, icon: <AwsIcon /> },
+        { name: "Vercel", level: 90, icon: <VercelIcon /> },
+        {name:"Docker",level:70,icon:<DockerIcon/>},
+        {name:"Jenkins",level:70,icon:<Jenkins/>},
+        {name:"Ansible",level:70,icon:<Ansible/>},
+        {name:"SonarQube",level:70,icon:<Sonarqube/>},
+        {name:"Nexus",level:70,icon:<Nexus/>},
       ],
     },
     {
-      title: "Tools & DevOps",
+      title: "Tools & Others",
       skills: [
-        { name: "Git & GitHub", level: 95, icon: <GitGithubIcon /> },
         { name: "VS Code", level: 98, icon: <VsCodeIcon /> },
         { name: "Postman", level: 92, icon: <PostmanIcon /> },
         { name: "Microservices", icon: <MicroservicesIcon /> },
-        { name: "AWS", level: 70, icon: <AwsIcon /> },
-        { name: "Vercel", level: 90, icon: <VercelIcon /> },
+        {name:"Maven",level:70,icon:<MavenIcon/>},
+        {name:"Stripe",level:70,icon:<Stripe/>},
+        {name:"Swagger",level:70,icon:<Swagger/>},
       ],
     },
   ];
@@ -145,9 +170,9 @@ const SkillsSection = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              { name: "TypeScript", icon: <TypescriptIcon /> },
-              { name: "Next.js", icon: <NextJsIcon /> },
-              { name: "Docker", level: 75, icon: <DockerIcon /> },
+              { name: "FastApi", icon: <FastApi /> },
+              { name: "Langchain", icon: <Langchain /> },
+              { name: "Kubernetes", level: 75, icon: <KubernetesIcon /> },
             ].map((tech) => (
               <div
                 key={tech.name}

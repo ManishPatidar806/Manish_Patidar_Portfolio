@@ -64,7 +64,7 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      title: "ClothStore",
+      title: "C2Store",
       description:
         "MERN-based online clothing store where users browse, add to cart, purchase, and admins manage products, view orders, and store operations.",
       image: clothStore,
@@ -76,8 +76,8 @@ const ProjectsSection = () => {
         "MongoDB",
         "JWT",
       ],
-      liveLink: "https://youtu.be/RFsbYAJS5pA",
-      githubLink: "https://github.com/ManishPatidar806/ClothStore",
+      liveLink: "https://c2store.vercel.app/",
+      githubLink: "https://github.com/ManishPatidar806/C2Store.git",
       featured: true,
     },
     {

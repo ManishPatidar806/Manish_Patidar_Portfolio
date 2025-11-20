@@ -59,8 +59,8 @@ const AboutSection = () => {
                 {[
                   "Full-Stack Development",
                   "Spring-boot & MicroServices",
-                  "React & Redux",
-                  "Node.js & Express",
+                  // "React & Redux",
+                  // "Node.js & Express",
                   "MySql & MongoDB",
                   "RESTful APIs",
                   "Git & Version Control",
@@ -81,7 +81,7 @@ const AboutSection = () => {
                 className="btn-hero group"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1RRtQGIkijvNizsKlFd7ukcfd0XyBZBGD/view?usp=drive_link",
+                    "https://drive.google.com/file/d/1s4emPm-vusvVN4sh2wgxHRhXKWEYLNXy/view?usp=drive_link",
                     "_blank"
                   )
                 }
