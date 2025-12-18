@@ -88,7 +88,7 @@ const ContactSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Let's <span className="text-blue-accent">Connect</span>
+            Let's <span className="text-blue-500">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? I'd love to hear from
@@ -125,8 +125,8 @@ const ContactSection = () => {
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <CardContent className="p-4 flex items-center space-x-4">
-                      <div className="p-3 bg-blue-accent/10 rounded-lg group-hover:bg-blue-accent/20 transition-colors">
-                        <IconComponent className="w-6 h-6 text-blue-accent" />
+                      <div className="p-3 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
+                        <IconComponent className="w-6 h-6 text-blue-500" />
                       </div>
                       <div>
                         <p className="font-medium text-foreground">

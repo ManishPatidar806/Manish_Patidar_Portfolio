@@ -45,69 +45,50 @@ const SkillsSection = () => {
       title: "Frontend",
       skills: [
         // { name: "Redux", level: 90, icon: <ReduxIcon /> },
-        { name: "HTML5", level: 98, icon: <Html5Icon /> },
-        { name: "CSS3", level: 95, icon: <Css3Icon /> },
-        { name: "JavaScript (ES6+)", level: 95, icon: <JavascriptIcon /> },
-        { name: "React.js", level: 95, icon: <ReactIcon /> },
-        { name: "Tailwind CSS", level: 92, icon: <TailwindCssIcon /> },
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "React.js",
+        "Tailwind CSS",
       ],
     },
     {
       title: "Backend",
       skills: [
-        { name: "Java", level: 85, icon: <JavaIcon /> },
-        { name: "Spring Boot", level: 92, icon: <SpringBootIcon /> },
-        { name: "Node.js", level: 92, icon: <NodeJsIcon /> },
-        { name: "Express.js", level: 90, icon: <ExpressJsIcon /> },
-        { name: "RESTful APIs", level: 93, icon: <RestApiIcon /> },
-        { name: "MongoDB", level: 90, icon: <MongoDbIcon /> },
-        { name: "MySql", level: 88, icon: <MySqlIcon /> },
-        // { name: "GraphQL", level: 80, icon: <GraphQlIcon /> },
-        { name: "JWT Auth", level: 88, icon: <JwtAuthIcon /> },
-        // { name: "Socket.io", level: 85, icon: <SocketIoIcon /> }
+        "Java",
+        "Python",
+        "Spring Boot",
+        "Node.js",
+        "Express.js",
+        "RESTful APIs",
+        "MongoDB",
+        "MySql",
+        // "GraphQL",
+        "JWT Auth",
+        //  "Socket.io",
       ],
     },
-    // {
-    //   title: "Database",
-    //   skills: [
-    //     { name: "MongoDB", level: 90, icon: <MongoDbIcon /> },
-    //     { name: "MySql", level: 88, icon: <MySqlIcon /> },
-    //     { name: "PostgreSQL", level: 75, icon: <PostgresqlIcon /> },
-    //     // { name: "Redis", level: 70, icon: <RedisIcon /> }
-    //   ],
-    // },
+
     {
       title: "DevOps",
       skills: [
-        { name: "Git & GitHub", level: 95, icon: <GitGithubIcon /> },
-        { name: "AWS", level: 70, icon: <AwsIcon /> },
-        { name: "Vercel", level: 90, icon: <VercelIcon /> },
-        {name:"Docker",level:70,icon:<DockerIcon/>},
-        {name:"Jenkins",level:70,icon:<Jenkins/>},
-        {name:"Ansible",level:70,icon:<Ansible/>},
-        {name:"SonarQube",level:70,icon:<Sonarqube/>},
-        {name:"Nexus",level:70,icon:<Nexus/>},
-      ],
+        "Git & GitHub",
+        "AWS", "Vercel", "Docker", "Jenkins", "Ansible", "SonarQube", "Nexus",]
     },
     {
       title: "Tools & Others",
       skills: [
-        { name: "VS Code", level: 98, icon: <VsCodeIcon /> },
-        { name: "Postman", level: 92, icon: <PostmanIcon /> },
-        { name: "Microservices", icon: <MicroservicesIcon /> },
-        {name:"Maven",level:70,icon:<MavenIcon/>},
-        {name:"Stripe",level:70,icon:<Stripe/>},
-        {name:"Swagger",level:70,icon:<Swagger/>},
+        "VS Code", "Postman", "Microservices", "Maven", "Stripe", "Swagger",
       ],
     },
   ];
 
   return (
-    <section className="section-padding bg-navy-dark text-white">
+    <section className="section-padding bg-gray-900 text-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Tech <span className="text-blue-light">Stack</span>
+            Tech <span className="text-blue-500">Stack</span>
           </h2>
           <p className="text-xl text-gray-light/80 max-w-2xl mx-auto">
             The technologies and tools I use to bring ideas to life
@@ -115,71 +96,61 @@ const SkillsSection = () => {
           <div className="w-20 h-1 bg-gradient-accent mx-auto mt-4"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <div
-              key={category.title}
-              className="card-portfolio bg-navy-medium/50 backdrop-blur-sm p-6 border border-blue-accent/20"
-              style={{ animationDelay: `${categoryIndex * 0.1}s` }}
-            >
-              <h3 className="text-2xl font-semibold mb-6 text-blue-light text-center">
-                {category.title}
-              </h3>
+        {/* Skills displayed as tags/chips */}
+        {skillCategories.map((category, categoryIndex) => (
+          <div key={category.title} className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 text-blue-500 flex items-center">
+              <span className="mr-3">{category.title}</span>
+              <div className="flex-1 h-px bg-blue-accent/30"></div>
+            </h3>
 
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skill.name}
-                    className="group hover:transform hover:scale-105 transition-all duration-300"
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center space-x-2">
-                        <span className="text-lg">{skill.icon}</span>
-                        <span className="font-medium text-sm">
-                          {skill.name}
-                        </span>
-                      </div>
-                      {/* <span className="text-blue-light text-sm font-semibold">
-                        {skill.level}%
-                      </span> */}
-                    </div>
+            <div className="flex flex-wrap gap-3">
+              {category.skills.map((skill, skillIndex) => (
+                <div
+                  key={skill}
+                  className="card-portfolio group relative bg-navy-medium/50 backdrop-blur-sm border border-blue-accent/20 hover:border-blue-500 px-6 py-3 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20 cursor-default"
+                  style={{ animationDelay: `${categoryIndex * 0.1 + skillIndex * 0.05}s` }}
+                >
+                  {/* Skill Name */}
+                  <span className="font-semibold text-base text-gray-light group-hover:text-blue-500 transition-colors duration-300">
+                    {skill}
+                  </span>
 
-                    {/* Progress Bar */}
-                    <div className="w-full bg-navy-dark/50 rounded-full h-2 overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-accent rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: `${skill.level}%`,
-                          animationDelay: `${
-                            categoryIndex * 0.1 + skillIndex * 0.05
-                          }s`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                  {/* Bottom accent line */}
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
 
         {/* Learning Section */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold mb-6 text-blue-light">
-            Currently Learning
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold mb-6 text-blue-500 flex items-center">
+            <span className="mr-3">Currently Learning</span>
+            <div className="flex-1 h-px bg-blue-accent/30"></div>
           </h3>
-          <div className="flex flex-wrap justify-center gap-4">
+
+          <div className="flex flex-wrap gap-3">
             {[
-              { name: "FastApi", icon: <FastApi /> },
-              { name: "Langchain", icon: <Langchain /> },
-              { name: "Kubernetes", level: 75, icon: <KubernetesIcon /> },
-            ].map((tech) => (
+              { name: "FastApi" },
+              { name: "Langchain" },
+              { name: "Kubernetes" },
+            ].map((tech, index) => (
               <div
                 key={tech.name}
-                className="flex items-center space-x-2 px-4 py-2 bg-blue-accent/20 rounded-full border border-blue-accent/30 hover:bg-blue-accent/30 transition-colors duration-300"
+                className="card-portfolio group relative bg-navy-medium/50 backdrop-blur-sm border border-blue-accent/20 hover:border-blue-500 px-6 py-3 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20 cursor-default"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <span className="text-lg">{tech.icon}</span>
-                <span className="font-medium">{tech.name}</span>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                  <span className="font-semibold text-base text-gray-light group-hover:text-blue-500 transition-colors duration-300">
+                    {tech.name}
+                  </span>
+                </div>
+
+                {/* Bottom accent line */}
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
               </div>
             ))}
           </div>

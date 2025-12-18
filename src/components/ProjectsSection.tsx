@@ -145,7 +145,7 @@ const ProjectsSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Featured <span className="text-blue-accent">Projects</span>
+            Featured <span className="text-blue-500">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills in
@@ -168,7 +168,7 @@ const ProjectsSection = () => {
                   alt={project.title}
                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-navy-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                <div className="absolute inset-0 bg-gray-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                   <Button
                     size="sm"
                     className="btn-hero"
@@ -180,7 +180,7 @@ const ProjectsSection = () => {
                   <Button
                     size="sm"
                     variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-navy-dark"
+                    className="border-white text-black hover:bg-white hover:text-navy-dark"
                     onClick={() => window.open(project.githubLink, "_blank")}
                   >
                     <Github className="w-4 h-4 mr-2" />
@@ -190,7 +190,7 @@ const ProjectsSection = () => {
               </div>
 
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-blue-accent transition-colors">
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-blue-500 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
@@ -201,7 +201,7 @@ const ProjectsSection = () => {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-blue-accent/10 text-blue-accent rounded text-xs font-medium"
+                      className="px-2 py-1 bg-blue-500/10 text-blue-500 rounded text-xs font-medium"
                     >
                       {tech}
                     </span>

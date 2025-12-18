@@ -8,28 +8,14 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen gradient-hero flex items-center justify-center relative overflow-hidden">
-      {/* Background animation elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-light rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div
-          className="absolute top-40 right-20 w-72 h-72 bg-blue-accent rounded-full mix-blend-multiply filter blur-xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute bottom-20 left-1/2 w-72 h-72 bg-navy-medium rounded-full mix-blend-multiply filter blur-xl animate-pulse"
-          style={{ animationDelay: "4s" }}
-        ></div>
-      </div>
-
-      <div className="container mx-auto px-4 text-center text-white relative z-10">
-        <div className="animate-fade-in-up">
+    <section className="min-h-screen bg-gray-900 flex items-center justify-center relative">
+      <div className="container mx-auto px-4 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Hi, I'm <span className="text-blue-light">Manish Patidar</span>
+            Hi, I'm <span className="text-blue-500">Manish Patidar</span>
           </h1>
           <h2 className="text-2xl md:text-3xl mb-4 text-gray-light">
             A Passionate{" "}
-            <span className="typing-animation text-blue-light">
+            <span className="typing-animation text-blue-500">
               Full Stack Developer
             </span>
           </h2>
@@ -43,14 +29,13 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
               onClick={() => scrollToSection("projects")}
-              className="btn-hero text-lg"
+              className="bg-gray-700 text-lg"
             >
               View Projects
             </Button>
             <Button
               onClick={() => scrollToSection("contact")}
-              variant="outline"
-              className="btn-outline-hero text-lg"
+              className="bg-blue-600 text-lg"
             >
               Contact Me
             </Button>
@@ -64,35 +49,24 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
-              <Github className="w-6 h-6" />
+              <Github className="w-6 h-6 text-gray-light/80" />
             </a>
             <a
-              href="https://www.linkedin.com/in/manishpatidar1180/"
+              href="https://www.linkedin.com/in/manishpatidar806/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
-              <Linkedin className="w-6 h-6" />
+              <Linkedin className="w-6 h-6 text-blue-500/80" />
             </a>
             <a
               href="mailto:manishpatidar1180@gmail.com"
               className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
-              <Mail className="w-6 h-6" />
+              <Mail className="w-6 h-6 text-red-500/80" />
             </a>
           </div>
-
-          {/* Scroll indicator */}
-          <div
-            onClick={() => scrollToSection("about")}
-            className="cursor-pointer animate-bounce"
-          >
-            <ArrowDown className="w-8 h-8 mx-auto text-blue-light" />
-            <p className="text-sm mt-2 text-gray-light/80">
-              Scroll to learn more
-            </p>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

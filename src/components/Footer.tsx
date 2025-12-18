@@ -8,12 +8,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-navy-dark text-white py-12 border-t border-blue-accent/20">
+    <footer className="bg-gray-900 text-white py-12 border-t border-blue-accent/20">
       <div className="container mx-auto max-w-6xl px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-blue-light">Manish Patidar</h3>
+            <h3 className="text-2xl font-bold text-blue-500">Manish Patidar</h3>
             <p className="text-gray-light/80 leading-relaxed">
               Passionate Full Stack Developer creating elegant solutions
               for complex problems. Always learning, always building.
@@ -22,7 +22,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-blue-light">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-blue-500">Quick Links</h4>
             <ul className="space-y-2">
               {[
                 { name: "About", href: "#about" },
@@ -44,7 +44,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-blue-light">Get In Touch</h4>
+            <h4 className="text-lg font-semibold text-blue-500">Get In Touch</h4>
             <div className="space-y-2">
               <a
                 href="mailto:alex.johnson@example.com"
@@ -62,23 +62,23 @@ const Footer = () => {
                 href="https://github.com/ManishPatidar806"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-blue-accent/20 rounded-lg hover:bg-blue-accent/30 transition-colors duration-300"
+                className="p-2 bg-blue-500/20 rounded-lg hover:bg-blue-500/30 transition-colors duration-300"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5 text-gray-light/80" />
               </a>
               <a
-                href="www.linkedin.com/in/manishpatidar806"
+                href="https://www.linkedin.com/in/manishpatidar806/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-blue-accent/20 rounded-lg hover:bg-blue-accent/30 transition-colors duration-300"
+                className="p-2 bg-blue-500/20 rounded-lg hover:bg-blue-500/30 transition-colors duration-300"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5 text-blue-500/80" />
               </a>
               <a
                 href="mailto:manishpatidar1180@gmail.com"
-                className="p-2 bg-blue-accent/20 rounded-lg hover:bg-blue-accent/30 transition-colors duration-300"
+                className="p-2 bg-blue-500/20 rounded-lg hover:bg-blue-500/30 transition-colors duration-300"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5 text-orange-500/80" />
               </a>
             </div>
           </div>

@@ -21,11 +21,11 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-navy-dark text-white">
-      <div className="container mx-auto max-w-4xl">
+    <section className="section-padding bg-gray-900 text-white">
+      <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Professional <span className="text-blue-light">Experience</span>
+            Professional <span className="text-blue-500">Experience</span>
           </h2>
           <p className="text-xl text-gray-light/80 max-w-2xl mx-auto">
             My journey through the tech industry and the experiences that shaped my skills
@@ -33,80 +33,78 @@ const ExperienceSection = () => {
           <div className="w-20 h-1 bg-gradient-accent mx-auto mt-4"></div>
         </div>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-accent"></div>
-
+        <div className="space-y-8">
           {experiences.map((experience, index) => (
             <div
               key={experience.id}
-              className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+              className="card-portfolio group relative bg-navy-medium/50 backdrop-blur-sm border border-blue-accent/20 hover:border-blue-500 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Timeline dot */}
-              <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-blue-light rounded-full border-4 border-navy-dark z-10">
-                {experience.current && (
-                  <div className="absolute inset-0 bg-blue-light rounded-full animate-ping"></div>
-                )}
-              </div>
-
-              {/* Content card */}
-              <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
-                }`}>
-                <div
-                  className="card-portfolio bg-navy-medium/50 backdrop-blur-sm p-6 border border-blue-accent/20"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {/* Header */}
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-bold text-blue-light">
+              {/* Side accent bar */}
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-accent rounded-l-xl transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
+              
+              <div className="p-6 md:p-8">
+                {/* Header Section */}
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-blue-500 transition-colors duration-300">
                         {experience.role}
                       </h3>
                       {experience.current && (
-                        <span className="px-2 py-1 bg-blue-accent text-white text-xs rounded-full">
+                        <span className="px-3 py-1 bg-blue-500 text-white text-xs rounded-full flex items-center gap-1">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
                           Current
                         </span>
                       )}
                     </div>
-                    <h4 className="text-lg font-semibold text-white mb-2">
+                    <h4 className="text-lg font-semibold text-blue-400 mb-3">
                       {experience.company}
                     </h4>
-
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm text-gray-light/80">
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        {experience.duration}
-                      </div>
-                      <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        {experience.location}
-                      </div>
-                      <span className="px-2 py-1 bg-blue-accent/20 text-blue-light rounded text-xs">
-                        {experience.type}
-                      </span>
-                    </div>
                   </div>
 
-                  {/* Description */}
-                  <ul className="space-y-2 mb-4">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center text-sm text-gray-light/80 bg-navy-dark/50 px-3 py-1.5 rounded-lg">
+                      <Calendar className="w-4 h-4 mr-2 text-blue-500" />
+                      {experience.duration}
+                    </div>
+                    <div className="flex items-center text-sm text-gray-light/80 bg-navy-dark/50 px-3 py-1.5 rounded-lg">
+                      <MapPin className="w-4 h-4 mr-2 text-blue-500" />
+                      {experience.location}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Type Badge */}
+                <div className="mb-4">
+                  <span className="inline-flex items-center px-4 py-1.5 bg-blue-accent/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30">
+                    {experience.type}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <div className="mb-6">
+                  <ul className="space-y-3">
                     {experience.description.map((item, itemIndex) => (
                       <li
                         key={itemIndex}
-                        className="text-gray-light/90 text-sm flex items-start"
+                        className="text-gray-light/90 flex items-start group/item"
                       >
-                        <span className="text-blue-light mr-2 mt-1">•</span>
-                        {item}
+                        <span className="text-blue-500 mr-3 mt-1 font-bold group-hover/item:scale-125 transition-transform">▸</span>
+                        <span className="flex-1">{item}</span>
                       </li>
                     ))}
                   </ul>
+                </div>
 
-                  {/* Technologies */}
+                {/* Technologies */}
+                <div>
+                  <h5 className="text-sm font-semibold text-gray-light/60 mb-3">Technologies Used:</h5>
                   <div className="flex flex-wrap gap-2">
                     {experience.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-blue-accent/10 text-blue-light rounded text-xs font-medium border border-blue-accent/20"
+                        className="px-4 py-2 bg-navy-medium/80 hover:bg-blue-accent/20 text-gray-light hover:text-blue-400 rounded-lg text-sm font-medium border border-blue-accent/20 hover:border-blue-500/50 transition-all duration-300 cursor-default"
                       >
                         {tech}
                       </span>
@@ -121,83 +119,99 @@ const ExperienceSection = () => {
 
         {/* Education Section */}
         <div className="mt-20">
-          <h3 className="text-2xl font-bold text-center mb-12 text-blue-light">
-            Education & Certifications
+          <h3 className="text-2xl font-bold mb-6 text-blue-500 flex items-center">
+            <span className="mr-3">Education & Certifications</span>
+            <div className="flex-1 h-px bg-blue-accent/30"></div>
           </h3>
+          
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="card-portfolio bg-navy-medium/50 backdrop-blur-sm p-6 border border-blue-accent/20">
-              <h4 className="text-lg font-semibold text-white mb-2">
-                Bachelor of Technology in Computer Science
-              </h4>
-              <p className="text-blue-light mb-2">
-                Rajiv Gandhi Proudyogiki Vishwavidyalaya
-                <p className="text-sm">
-                  {" "}
-                  University in Bhopal, Madhya Pradesh{" "}
+            {/* Education Card */}
+            <div className="card-portfolio group relative bg-navy-medium/50 backdrop-blur-sm border border-blue-accent/20 hover:border-blue-500 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-accent rounded-l-xl transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
+              
+              <div className="mb-3">
+                <h4 className="text-xl font-bold text-white group-hover:text-blue-500 transition-colors duration-300 mb-3">
+                  Bachelor of Technology in Computer Science
+                </h4>
+                <p className="text-blue-400 font-semibold mb-1">
+                  Rajiv Gandhi Proudyogiki Vishwavidyalaya
                 </p>
-              </p>
-              <p className="text-gray-light/80 text-sm">
-                2022 - 2026 • GPA: 7.04/10.0
-              </p>
+                <p className="text-sm text-gray-light/70 mb-3">
+                  University in Bhopal, Madhya Pradesh
+                </p>
+              </div>
+              
+              <div className="flex items-center justify-between pt-3 border-t border-blue-accent/20">
+                <span className="text-sm text-gray-light/80">2022 - 2026</span>
+                <span className="px-3 py-1 bg-blue-accent/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30">
+                  GPA: 7.04/10.0
+                </span>
+              </div>
             </div>
 
-            <div className="card-portfolio bg-navy-medium/50 backdrop-blur-sm p-6 border border-blue-accent/20">
-              <h4 className="text-lg font-semibold text-white mb-2">
+            {/* Certifications Card */}
+            <div className="card-portfolio group relative bg-navy-medium/50 backdrop-blur-sm border border-blue-accent/20 hover:border-blue-500 p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-accent rounded-l-xl transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
+              
+              <h4 className="text-xl font-bold text-white group-hover:text-blue-500 transition-colors duration-300 mb-4">
                 Certifications
               </h4>
-              <ul className="space-y-1 text-sm text-gray-light/90">
-
+              <ul className="space-y-2.5">
                 <li>
                   <a
                     href="https://res.cloudinary.com/dps3eybtx/image/upload/v1753722034/Portfolio/Certificate/Screenshot_from_2025-07-28_22-30-20_rd7lwz.png"
-                    className="text-blue-300 group"
+                    className="group/link flex items-start text-gray-light/90 hover:text-blue-400 transition-colors duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    • <span className="hover:underline">AWS Cloud Foundation</span>
+                    <span className="text-blue-500 mr-2 font-bold group-hover/link:scale-125 transition-transform">▸</span>
+                    <span className="group-hover/link:underline">AWS Cloud Foundation</span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://res.cloudinary.com/dps3eybtx/image/upload/v1763630010/Portfolio/Certificate/DSA_Nptel.png"
-                    className="text-blue-300 group"
+                    className="group/link flex items-start text-gray-light/90 hover:text-blue-400 transition-colors duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    • <span className="hover:underline">DSA Using Java - NPTEL</span>
+                    <span className="text-blue-500 mr-2 font-bold group-hover/link:scale-125 transition-transform">▸</span>
+                    <span className="group-hover/link:underline">DSA Using Java - NPTEL</span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://res.cloudinary.com/dps3eybtx/image/upload/v1735220427/Portfolio/Certificate/cv1k03nsvciu7kxax3dt.png"
-                    className="text-blue-300 group"
+                    className="group/link flex items-start text-gray-light/90 hover:text-blue-400 transition-colors duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    • <span className="hover:underline">Networking Basic</span>
+                    <span className="text-blue-500 mr-2 font-bold group-hover/link:scale-125 transition-transform">▸</span>
+                    <span className="group-hover/link:underline">Networking Basic</span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://res.cloudinary.com/dps3eybtx/image/upload/v1725105660/Portfolio/Certificate/r1wcwbrthcqnjegrmddd.png"
-                    className="text-blue-300 group"
+                    className="group/link flex items-start text-gray-light/90 hover:text-blue-400 transition-colors duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    • <span className="hover:underline">HackerRank Java</span>
+                    <span className="text-blue-500 mr-2 font-bold group-hover/link:scale-125 transition-transform">▸</span>
+                    <span className="group-hover/link:underline">HackerRank Java</span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://res.cloudinary.com/dps3eybtx/image/upload/v1752781800/Portfolio/Certificate/BuildFest_fdhx9d.png"
-                    className="text-blue-300 group"
+                    className="group/link flex items-start text-gray-light/90 hover:text-blue-400 transition-colors duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    • <span className="hover:underline">Build Fest'25</span>
+                    <span className="text-blue-500 mr-2 font-bold group-hover/link:scale-125 transition-transform">▸</span>
+                    <span className="group-hover/link:underline">Build Fest'25</span>
                   </a>
                 </li>
-
               </ul>
             </div>
           </div>

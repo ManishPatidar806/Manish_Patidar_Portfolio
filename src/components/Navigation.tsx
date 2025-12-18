@@ -63,16 +63,6 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-accent transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
-            <Button 
-              onClick={() => scrollToSection('#contact')}
-              className={`${
-                isScrolled 
-                  ? 'btn-hero' 
-                  : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'
-              } transition-all duration-300`}
-            >
-              Hire Me
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,19 +89,12 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-2 text-navy-dark hover:text-blue-accent hover:bg-blue-accent/10 transition-colors duration-300 rounded"
+                className="block w-full text-left px-4 py-2 text-navy-dark hover:text-blue-500 hover:bg-blue-500/10 transition-colors duration-300 rounded"
               >
                 {item.name}
               </button>
             ))}
-            <div className="px-4 pt-2">
-              <Button 
-                onClick={() => scrollToSection('#contact')}
-                className="btn-hero w-full"
-              >
-                Hire Me
-              </Button>
-            </div>
+            
           </div>
         </div>
       </div>

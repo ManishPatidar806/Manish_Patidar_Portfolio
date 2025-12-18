@@ -8,7 +8,7 @@ const AboutSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About <span className="text-blue-accent">Me</span>
+            About <span className="text-blue-500">Me</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-accent mx-auto"></div>
         </div>
@@ -20,7 +20,7 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-gradient-accent rounded-full blur-lg opacity-30 scale-110"></div>
               <img
                 src={profileImage}
-                alt="Alex Johnson"
+                alt="Manish Patidar"
                 className="relative w-80 h-80 rounded-full object-cover shadow-[var(--shadow-elegant)] border-4 border-white/50"
               />
             </div>
@@ -32,7 +32,7 @@ const AboutSection = () => {
               Passionate Developer & Problem Solver
             </h3>
 
-            <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+            <div className="space-y-4 text-foreground text-lg leading-relaxed">
               <p>
                 I'm a dedicated Full stack developer with proficient in building
                 modern web applications. My journey started with a Computer
@@ -67,7 +67,7 @@ const AboutSection = () => {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-blue-accent/10 text-blue-accent rounded-full text-sm font-medium"
+                    className="px-3 py-1 bg-blue-accent/10 text-blue-500 rounded-full text-sm font-medium"
                   >
                     {skill}
                   </span>
