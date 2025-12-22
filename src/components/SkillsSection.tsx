@@ -86,33 +86,33 @@ const SkillsSection = () => {
   return (
     <section className="section-padding bg-gray-900 text-white">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             Tech <span className="text-blue-500">Stack</span>
           </h2>
-          <p className="text-xl text-gray-light/80 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-xl text-gray-light/80 max-w-2xl mx-auto px-2">
             The technologies and tools I use to bring ideas to life
           </p>
-          <div className="w-20 h-1 bg-gradient-accent mx-auto mt-4"></div>
+          <div className="w-16 sm:w-20 h-1 bg-gradient-accent mx-auto mt-3 sm:mt-4"></div>
         </div>
 
         {/* Skills displayed as tags/chips */}
         {skillCategories.map((category, categoryIndex) => (
-          <div key={category.title} className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-blue-500 flex items-center">
-              <span className="mr-3">{category.title}</span>
+          <div key={category.title} className="mb-8 sm:mb-12">
+            <h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6 text-blue-500 flex items-center">
+              <span className="mr-2 sm:mr-3">{category.title}</span>
               <div className="flex-1 h-px bg-blue-accent/30"></div>
             </h3>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               {category.skills.map((skill, skillIndex) => (
                 <div
                   key={skill}
-                  className="card-portfolio group relative bg-navy-medium/50 backdrop-blur-sm border border-blue-accent/20 hover:border-blue-500 px-6 py-3 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20 cursor-default"
+                  className="card-portfolio group relative bg-navy-medium/50 backdrop-blur-sm border border-blue-accent/20 hover:border-blue-500 px-3 py-1.5 sm:px-6 sm:py-3 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20 cursor-default"
                   style={{ animationDelay: `${categoryIndex * 0.1 + skillIndex * 0.05}s` }}
                 >
                   {/* Skill Name */}
-                  <span className="font-semibold text-base text-gray-light group-hover:text-blue-500 transition-colors duration-300">
+                  <span className="font-semibold text-xs sm:text-base text-gray-light group-hover:text-blue-500 transition-colors duration-300">
                     {skill}
                   </span>
 
@@ -125,13 +125,13 @@ const SkillsSection = () => {
         ))}
 
         {/* Learning Section */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold mb-6 text-blue-500 flex items-center">
-            <span className="mr-3">Currently Learning</span>
+        <div className="mt-8 sm:mt-16">
+          <h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6 text-blue-500 flex items-center">
+            <span className="mr-2 sm:mr-3">Currently Learning</span>
             <div className="flex-1 h-px bg-blue-accent/30"></div>
           </h3>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             {[
               { name: "FastApi" },
               { name: "Langchain" },
@@ -139,12 +139,12 @@ const SkillsSection = () => {
             ].map((tech, index) => (
               <div
                 key={tech.name}
-                className="card-portfolio group relative bg-navy-medium/50 backdrop-blur-sm border border-blue-accent/20 hover:border-blue-500 px-6 py-3 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20 cursor-default"
+                className="card-portfolio group relative bg-navy-medium/50 backdrop-blur-sm border border-blue-accent/20 hover:border-blue-500 px-3 py-1.5 sm:px-6 sm:py-3 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20 cursor-default"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                  <span className="font-semibold text-base text-gray-light group-hover:text-blue-500 transition-colors duration-300">
+                <div className="flex items-center space-x-1.5 sm:space-x-2">
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                  <span className="font-semibold text-xs sm:text-base text-gray-light group-hover:text-blue-500 transition-colors duration-300">
                     {tech.name}
                   </span>
                 </div>

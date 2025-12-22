@@ -6,14 +6,14 @@ const AboutSection = () => {
   return (
     <section id="about" className="section-padding bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             About <span className="text-blue-500">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-accent mx-auto"></div>
+          <div className="w-16 sm:w-20 h-1 bg-gradient-accent mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Profile Image */}
           <div className="flex justify-center md:justify-start">
             <div className="relative">
@@ -21,18 +21,18 @@ const AboutSection = () => {
               <img
                 src={profileImage}
                 alt="Manish Patidar"
-                className="relative w-80 h-80 rounded-full object-cover shadow-[var(--shadow-elegant)] border-4 border-white/50"
+                className="relative w-48 h-48 sm:w-80 sm:h-80 rounded-full object-cover shadow-[var(--shadow-elegant)] border-2 sm:border-4 border-white/50"
               />
             </div>
           </div>
 
           {/* About Content */}
-          <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground">
               Passionate Developer & Problem Solver
             </h3>
 
-            <div className="space-y-4 text-foreground text-lg leading-relaxed">
+            <div className="space-y-3 sm:space-y-4 text-foreground text-sm sm:text-lg leading-relaxed">
               <p>
                 I'm a dedicated Full stack developer with proficient in building
                 modern web applications. My journey started with a Computer
@@ -51,11 +51,11 @@ const AboutSection = () => {
             </div>
 
             {/* Skills Highlights */}
-            <div className="space-y-3">
-              <h4 className="text-xl font-semibold text-foreground">
+            <div className="space-y-2 sm:space-y-3">
+              <h4 className="text-base sm:text-xl font-semibold text-foreground">
                 Core Strengths:
               </h4>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {[
                   "Full-Stack Development",
                   "Spring-boot & MicroServices",
@@ -67,7 +67,7 @@ const AboutSection = () => {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-blue-accent/10 text-blue-500 rounded-full text-sm font-medium"
+                    className="px-2 py-0.5 sm:px-3 sm:py-1 bg-blue-accent/10 text-blue-500 rounded-full text-xs sm:text-sm font-medium"
                   >
                     {skill}
                   </span>

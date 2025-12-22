@@ -86,25 +86,25 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section-padding bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Let's <span className="text-blue-500">Connect</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
             Have a project in mind or want to collaborate? I'd love to hear from
             you!
           </p>
-          <div className="w-20 h-1 bg-gradient-accent mx-auto mt-4"></div>
+          <div className="w-16 sm:w-20 h-1 bg-gradient-accent mx-auto mt-3 sm:mt-4"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
+              <h3 className="text-lg sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
                 Get in Touch
               </h3>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              <p className="text-muted-foreground text-sm sm:text-lg leading-relaxed mb-6 sm:mb-8">
                 I'm always open to discussing new opportunities or working on
                 interesting projects. Feel free to reach out through any of the
                 channels below.
@@ -112,7 +112,7 @@ const ContactSection = () => {
             </div>
 
             {/* Contact Cards */}
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {contactInfo.map((info, index) => {
                 const IconComponent = info.icon;
                 return (
@@ -124,15 +124,15 @@ const ContactSection = () => {
                     }
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <CardContent className="p-4 flex items-center space-x-4">
-                      <div className="p-3 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
-                        <IconComponent className="w-6 h-6 text-blue-500" />
+                    <CardContent className="p-3 sm:p-4 flex items-center space-x-3 sm:space-x-4">
+                      <div className="p-2 sm:p-3 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors flex-shrink-0">
+                        <IconComponent className="w-4 h-4 sm:w-6 sm:h-6 text-blue-500" />
                       </div>
-                      <div>
-                        <p className="font-medium text-foreground">
+                      <div className="min-w-0">
+                        <p className="font-medium text-foreground text-sm sm:text-base">
                           {info.label}
                         </p>
-                        <p className="text-muted-foreground">{info.value}</p>
+                        <p className="text-muted-foreground text-xs sm:text-base truncate">{info.value}</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -142,10 +142,10 @@ const ContactSection = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold text-foreground mb-4">
+              <h4 className="text-base sm:text-lg font-semibold text-foreground mb-3 sm:mb-4">
                 Follow Me
               </h4>
-              <div className="flex space-x-4">
+              <div className="flex space-x-3 sm:space-x-4">
                 {socialLinks.map((social, index) => {
                   const IconComponent = social.icon;
                   return (
@@ -154,10 +154,10 @@ const ContactSection = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-3 bg-blue-accent/10 rounded-lg hover:bg-blue-accent/20 transition-all duration-300 hover:scale-110 ${social.color}`}
+                      className={`p-2 sm:p-3 bg-blue-accent/10 rounded-lg hover:bg-blue-accent/20 transition-all duration-300 hover:scale-110 ${social.color}`}
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      <IconComponent className="w-6 h-6" />
+                      <IconComponent className="w-5 h-5 sm:w-6 sm:h-6" />
                     </a>
                   );
                 })}
@@ -167,16 +167,16 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <Card className="card-portfolio">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
+            <CardContent className="p-4 sm:p-8">
+              <h3 className="text-lg sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
                 Send a Message
               </h3>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-foreground mb-2"
+                    className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2"
                   >
                     Your Name
                   </label>
@@ -195,7 +195,7 @@ const ContactSection = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-foreground mb-2"
+                    className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2"
                   >
                     Email Address
                   </label>
@@ -214,7 +214,7 @@ const ContactSection = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-foreground mb-2"
+                    className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2"
                   >
                     Message
                   </label>

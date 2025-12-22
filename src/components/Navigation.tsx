@@ -35,11 +35,11 @@ const Navigation = () => {
         ? 'bg-white/95 backdrop-blur-sm shadow-lg' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-2 sm:px-4">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div 
-            className="font-bold text-xl cursor-pointer"
+            className="font-bold text-base sm:text-xl cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <span className={`transition-colors duration-300 ${
@@ -69,12 +69,12 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="sm"
-            className={`md:hidden p-2 ${
+            className={`md:hidden p-1 sm:p-2 ${
               isScrolled ? 'text-navy-dark' : 'text-white'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
           </Button>
         </div>
 
@@ -84,12 +84,12 @@ const Navigation = () => {
             ? 'max-h-96 bg-white/95 backdrop-blur-sm rounded-lg mt-2 shadow-lg' 
             : 'max-h-0'
         }`}>
-          <div className="py-4 space-y-2">
+          <div className="py-2 sm:py-4 space-y-1 sm:space-y-2">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-2 text-navy-dark hover:text-blue-500 hover:bg-blue-500/10 transition-colors duration-300 rounded"
+                className="block w-full text-left px-2 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base text-navy-dark hover:text-blue-500 hover:bg-blue-500/10 transition-colors duration-300 rounded"
               >
                 {item.name}
               </button>

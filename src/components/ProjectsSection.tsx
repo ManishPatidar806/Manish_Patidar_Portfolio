@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
 import tijori from "@/assets/Tijori.png";
-import gameingZone from "@/assets/GameingZone.png";
-import thinkAndSelect from "@/assets/ThinkAndSelect.png";
+import SmartResponse from "@/assets/SmartResponse.png";
+
 import clothStore from "@/assets/ClothStore.png";
 import sharebox from "@/assets/Share-box.png";
-import visitingPlace from "@/assets/Visiting-place.png";
+
 import G2store from "@/assets/G2Store.png"
 import Cyntro from "@/assets/Cyntro.png"
 
@@ -36,7 +36,6 @@ const ProjectsSection = () => {
         "Stripe",
         "JWT",
         "Mail",
-        "Flowbite",
         "MicroService-architecture",
       ],
       liveLink: "https://g2store.vercel.app/",
@@ -93,26 +92,15 @@ const ProjectsSection = () => {
     },
     {
       id: 6,
-      title: "Visiting-Place",
+      title: "SmartResponse",
       description:
-        "A modern website showcasing temples worldwide, offering rich details, history, and insights into each sacred place for global exploration.",
-      image: visitingPlace,
-      technologies: ["Html", "Bootstrap-5", "Express.js", "Node.js", "MongoDB"],
-      liveLink: "https://visiting-place.onrender.com/",
-      githubLink: "https://github.com/ManishPatidar806/Visiting-Place",
+        "Smart Response is a web app using Google’s Gemini AI to craft professional email replies in different tones, built with Spring Boot and React.",
+      image: SmartResponse,
+      technologies: ["React", "Tailwind CSS", "Spring-boot", "Spring Ai"],
+      liveLink: "https://youtu.be/YMxtUCDyShw?si=HZzjz_yG-WBHKdFO",
+      githubLink: "https://github.com/ManishPatidar806/SmartResponse",
       featured: true,
     },
-    // {
-    //   id: 7,
-    //   title: "SmartResponse",
-    //   description:
-    //     "Smart Response is a web app using Google’s Gemini AI to craft professional email replies in different tones, built with Spring Boot and React.",
-    //   // image: projectDashboard,
-    //   technologies: ["React", "Tailwind CSS", "Spring-boot", "Spring Ai"],
-    //   // liveLink: "https://weather-demo.com",
-    //   githubLink: "https://github.com/ManishPatidar806/SmartResponse",
-    //   featured: false,
-    // },
     // {
     //   id: 8,
     //   title: "PDF2Quiz",
@@ -143,19 +131,19 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="section-padding bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Featured <span className="text-blue-500">Projects</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
             Here are some of my recent projects that showcase my skills in
             full-stack development
           </p>
-          <div className="w-20 h-1 bg-gradient-accent mx-auto mt-4"></div>
+          <div className="w-16 sm:w-20 h-1 bg-gradient-accent mx-auto mt-3 sm:mt-4"></div>
         </div>
 
         {/* Featured Projects */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-16">
           {featuredProjects.map((project, index) => (
             <Card
               key={project.id}
@@ -166,42 +154,42 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-32 sm:h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gray-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                <div className="absolute inset-0 bg-gray-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-2 sm:space-x-4 p-2">
                   <Button
                     size="sm"
-                    className="btn-hero"
+                    className="btn-hero text-xs sm:text-sm px-2 sm:px-4"
                     onClick={() => window.open(project.liveLink, "_blank")}
                   >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
+                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                    Demo
                   </Button>
                   <Button
                     size="sm"
                     variant="outline"
-                    className="border-white text-black hover:bg-white hover:text-navy-dark"
+                    className="border-white text-black hover:bg-white hover:text-navy-dark text-xs sm:text-sm px-2 sm:px-4"
                     onClick={() => window.open(project.githubLink, "_blank")}
                   >
-                    <Github className="w-4 h-4 mr-2" />
+                    <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                     Code
                   </Button>
                 </div>
               </div>
 
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-blue-500 transition-colors">
+              <CardContent className="p-3 sm:p-6">
+                <h3 className="text-base sm:text-xl font-semibold text-foreground mb-2 sm:mb-3 group-hover:text-blue-500 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 sm:gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-blue-500/10 text-blue-500 rounded text-xs font-medium"
+                      className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-blue-500/10 text-blue-500 rounded text-[10px] sm:text-xs font-medium"
                     >
                       {tech}
                     </span>
@@ -274,13 +262,14 @@ const ProjectsSection = () => {
         {/* View More Projects CTA */}
         <div className="text-center">
           <Button
-            className="btn-hero"
+            className="btn-hero text-xs sm:text-base"
             onClick={() =>
               window.open("https://github.com/manishpatidar806", "_blank")
             }
           >
-            <Github className="w-5 h-5 mr-2" />
-            View All Projects on GitHub
+            <Github className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
+            <span className="hidden sm:inline">View All Projects on GitHub</span>
+            <span className="sm:hidden">All Projects</span>
           </Button>
         </div>
       </div>
