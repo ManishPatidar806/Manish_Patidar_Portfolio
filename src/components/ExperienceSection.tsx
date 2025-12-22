@@ -159,7 +159,7 @@ const ExperienceSection = () => {
                 <li>
                   <a
                     href="https://res.cloudinary.com/dps3eybtx/image/upload/v1753722034/Portfolio/Certificate/Screenshot_from_2025-07-28_22-30-20_rd7lwz.png"
-                    className="group/link flex items-start text-gray-light/90 hover:text-blue-400 transition-colors duration-300 text-xs sm:text-base"
+                    className="group/link flex items-start text-gray-light/90 hover:text-blue-400 transition-colors duration-300 "
                     target="_blank"
                     rel="noopener noreferrer"
                   >
