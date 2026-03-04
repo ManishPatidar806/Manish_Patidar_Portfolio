@@ -41,12 +41,7 @@ const AboutSection = () => {
               </p>
 
               <p>
-                I specialize in full-stack development using Spring Boot, Reactjs,
-                Microservices, MySQL, and MongoDB, with a strong focus on user
-                experience and performance optimization. I also have working
-                knowledge of Express.js and Node.js, and enjoy collaborating
-                with teams that value clean code, innovative thinking, and
-                continuous learning.
+               I specialize in full-stack development using Spring Boot, React.js, microservices, MySQL, and MongoDB, with a strong focus on user experience and performance optimization. I also have working knowledge of FastAPI, LangChain, and LangGraph, and I enjoy collaborating with teams that value clean code, innovative thinking, and continuous learning.
               </p>
             </div>
 
@@ -59,8 +54,8 @@ const AboutSection = () => {
                 {[
                   "Full-Stack Development",
                   "Spring-boot & MicroServices",
-                  // "React & Redux",
-                  // "Node.js & Express",
+                  "Python & FastAPI",
+                   "LangChain & LangGraph",
                   "MySql & MongoDB",
                   "RESTful APIs",
                   "Git & Version Control",

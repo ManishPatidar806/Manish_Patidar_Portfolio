@@ -20,10 +20,7 @@ const HeroSection = () => {
             </span>
           </h2>
           <p className="text-sm sm:text-xl md:text-2xl mb-6 sm:mb-8 max-w-3xl mx-auto text-gray-light/90 leading-relaxed">
-            I specialize in building full-stack web applications using React.js,
-            Spring Boot, and MySQL, with additional hands-on experience in
-            Microservices, MongoDB, Express.js, and Node.js. I enjoy creating
-            clean, scalable solutions from real-world ideas.
+           I specialize in building full-stack web applications using React.js, Spring Boot, and MySQL, with additional hands-on experience in microservices, MongoDB, and FastAPI. I enjoy creating clean, scalable solutions from real-world ideas.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12">

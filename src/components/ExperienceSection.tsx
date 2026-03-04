@@ -14,7 +14,7 @@ const ExperienceSection = () => {
         "Designed conversation flows, integrated APIs, and connected the chatbot with relevant knowledge bases.",
         "Developed a full-stack web platform connecting families and caregivers with role-based access and secure authentication.",
       ],
-      technologies: ["React", "Node.js", "MongoDB", "AWS", "Docker", "Expressjs", "LangChain", "LangGraph"],
+      technologies: ["React", "Python", "FastApi", "AWS", "Docker", "LangChain", "LangGraph"],
       current: false,
     },
 
@@ -143,7 +143,7 @@ const ExperienceSection = () => {
               <div className="flex items-center justify-between pt-2 sm:pt-3 border-t border-blue-accent/20">
                 <span className="text-xs sm:text-sm text-gray-light/80">2022 - 2026</span>
                 <span className="px-2 py-0.5 sm:px-3 sm:py-1 bg-blue-accent/20 text-blue-400 rounded-full text-xs sm:text-sm font-medium border border-blue-500/30">
-                  GPA: 7.04/10.0
+                  GPA: 7.17/10.0
                 </span>
               </div>
             </div>

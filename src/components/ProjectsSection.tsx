@@ -6,6 +6,7 @@ import SmartResponse from "@/assets/SmartResponse.png";
 
 import clothStore from "@/assets/ClothStore.png";
 import sharebox from "@/assets/Share-box.png";
+import Easyvisual from "@/assets/EasyVisual.png";
 
 import G2store from "@/assets/G2Store.png"
 import Cyntro from "@/assets/Cyntro.png"
@@ -63,20 +64,18 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      title: "C2Store",
+      title: "EasyVisual",
       description:
-        "MERN-based online clothing store where users browse, add to cart, purchase, and admins manage products, view orders, and store operations.",
-      image: clothStore,
+        "EasyVisual is No-code ML platform where users build pipelines, train models, and evaluate performance through drag-and-drop interface",
+      image: Easyvisual,
       technologies: [
         "React",
         "Tailwind CSS",
-        "Express.js",
-        "Node.js",
-        "MongoDB",
-        "JWT",
+        "Python",
+        "FastApi",
       ],
-      liveLink: "https://c2store.vercel.app/",
-      githubLink: "https://github.com/ManishPatidar806/C2Store.git",
+      liveLink: "https://easy-visual.vercel.app/",
+      githubLink: "https://github.com/ManishPatidar806/Easy_visual.git",
       featured: true,
     },
     {
