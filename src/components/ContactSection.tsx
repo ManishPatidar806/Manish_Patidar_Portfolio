@@ -9,7 +9,6 @@ import {
   MapPin,
   Github,
   Linkedin,
-  Twitter,
   Send,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -27,15 +26,26 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+
+    try {
+      window.location.href = `mailto:manishpatidar1180@gmail.com?subject=${subject}&body=${body}`;
       toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
+        title: "Message Draft Ready",
+        description: "Your email app has been opened with your message details.",
       });
       setFormData({ name: "", email: "", message: "" });
+    } catch {
+      toast({
+        title: "Submission Failed",
+        description: "Could not open your email app. Please try again.",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleChange = (
@@ -58,7 +68,7 @@ const ContactSection = () => {
       icon: Phone,
       label: "Phone",
       value: "+91 6266209364",
-      href: "tel:+91 6266209364",
+      href: "tel:+916266209364",
     },
     {
       icon: MapPin,
@@ -119,9 +129,14 @@ const ContactSection = () => {
                   <Card
                     key={info.label}
                     className="card-portfolio group cursor-pointer"
-                    onClick={() =>
-                      info.href !== "#" && window.open(info.href, "_blank")
-                    }
+                    onClick={() => {
+                      if (info.href === "#") return;
+                      if (info.href.startsWith("mailto:") || info.href.startsWith("tel:")) {
+                        window.location.href = info.href;
+                        return;
+                      }
+                      window.open(info.href, "_blank", "noopener,noreferrer");
+                    }}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <CardContent className="p-3 sm:p-4 flex items-center space-x-3 sm:space-x-4">
@@ -188,7 +203,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full"
-                    placeholder="Manish Patidar"
+                    placeholder="Enter your name"
                   />
                 </div>
 
@@ -207,7 +222,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full"
-                    placeholder="manishpatidar1180@gmail.com"
+                    placeholder="Enter your email address"
                   />
                 </div>
 
